@@ -13,7 +13,7 @@ ShipyardJS.prototype.listContainers = function(callback) {
       headers: {'X-Service-Key': this.SERVICE_KEY},
     },
     function(error, response, body) {
-      if (!error && response.statusCode == 200) {
+      if (!error && response.statusCode === 200) {
         var res = JSON.parse(body);
         callback(null, res);
       } else {
@@ -31,7 +31,7 @@ ShipyardJS.prototype.deployContainer = function(payload, callback) {
       headers: {'X-Service-Key': this.SERVICE_KEY},
     },
     function(error, response, body) {
-      if (!error && response.statusCode == 201) {
+      if (!error && response.statusCode === 201) {
         callback(null, body);
       } else {
         console.log(body);
@@ -47,7 +47,7 @@ ShipyardJS.prototype.inspectContainer = function(containerID, callback) {
       headers: {'X-Service-Key': this.SERVICE_KEY},
     },
     function(error, response, body) {
-      if (!error && response.statusCode == 200) {
+      if (!error && response.statusCode === 200) {
         var res = JSON.parse(body);
         callback(null, res);
       } else {
@@ -63,7 +63,7 @@ ShipyardJS.prototype.destoryContainer = function(containerID, callback) {
       headers: {'X-Service-Key': this.SERVICE_KEY},
     },
     function(error, response, body) {
-      if (!error && response.statusCode == 204) {
+      if (!error && response.statusCode === 204) {
         callback(null, 'Deleted ' + containerID);
       } else {
         callback(new Error(httpStatus[response.statusCode]));
@@ -78,7 +78,7 @@ ShipyardJS.prototype.stopContainer = function(containerID, callback) {
       headers: {'X-Service-Key': this.SERVICE_KEY},
     },
     function(error, response, body) {
-      if (!error && response.statusCode == 204) {
+      if (!error && response.statusCode === 204) {
         callback(null, 'Stoped ' + containerID);
       } else {
         callback(new Error(httpStatus[response.statusCode]));
@@ -94,7 +94,7 @@ ShipyardJS.prototype.restartContainer = function(containerID, callback) {
       headers: {'X-Service-Key': this.SERVICE_KEY},
     },
     function(error, response, body) {
-      if (!error && response.statusCode == 204) {
+      if (!error && response.statusCode === 204) {
         callback(null, 'Restarted ' + containerID);
       } else {
         callback(new Error(httpStatus[response.statusCode]));
@@ -110,7 +110,7 @@ ShipyardJS.prototype.logsContainer = function(containerID, callback) {
       headers: {'X-Service-Key': this.SERVICE_KEY},
     },
     function(error, response, body) {
-      if (!error && response.statusCode == 200) {
+      if (!error && response.statusCode === 200) {
         callback(null, body);
       } else {
         callback(new Error(httpStatus[response.statusCode]));
