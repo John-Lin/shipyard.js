@@ -2,8 +2,8 @@ var request = require('request');
 var httpStatus = require('http-status');
 
 function ShipyardJS(host, key) {
-  this.SERVICE_KEY = key;
-  this.HOST = host;
+  this.SERVICE_KEY = key || null;
+  this.HOST = host || '127.0.0.1:8080';
 }
 
 ShipyardJS.prototype.listContainers = function(callback) {
@@ -117,6 +117,39 @@ ShipyardJS.prototype.logsContainer = function(containerID, callback) {
       }
     });
 
+};
+
+ShipyardJS.prototype.listEngines = function(callback) {
+  request.get(
+    {
+      url: 'http://' + this.HOST + '/api/engines',
+      headers: {'X-Service-Key': this.SERVICE_KEY},
+    },
+    function(error, response, body) {
+      if (!error && response.statusCode === 200) {
+        var res = JSON.parse(body);
+        callback(null, res);
+      } else {
+        callback(new Error(httpStatus[response.statusCode]));
+      }
+    });
+
+};
+
+ShipyardJS.prototype.getClusterInfo = function(callback) {
+  request.get(
+    {
+      url: 'http://' + this.HOST + '/api/cluster/info',
+      headers: {'X-Service-Key': this.SERVICE_KEY},
+    },
+    function(error, response, body) {
+      if (!error && response.statusCode === 200) {
+        var res = JSON.parse(body);
+        callback(null, res);
+      } else {
+        callback(new Error(httpStatus[response.statusCode]));
+      }
+    });
 };
 
 module.exports = ShipyardJS;
