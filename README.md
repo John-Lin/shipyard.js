@@ -1,10 +1,12 @@
 # ShipyardJS
-
 [![npm][npm-image]][npm-url]
+
 [npm-image]: https://img.shields.io/npm/v/shipyard.js.svg
 [npm-url]: https://npmjs.org/package/shipyard.js
 
-A Shipyard API wrapper for Node.js
+### Description
+
+A Shipyard API wrapper for `Node.js`
 
 The documentation of Shipyard API
 - http://shipyard-project.com/docs/api/
