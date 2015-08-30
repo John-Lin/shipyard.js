@@ -1,0 +1,29 @@
+{
+  "name": "shipyard.js",
+  "version": "0.0.1",
+  "description": "An Shipyard API wrapper for Node.js.",
+  "main": "index.js",
+  "dependencies": {
+    "http-status": "^0.2.0",
+    "request": "^2.61.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/John-Lin/shipyardJS.git"
+  },
+  "keywords": [
+    "shipyard",
+    "docker",
+    "container"
+  ],
+  "author": "John-Lin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/John-Lin/shipyardJS/issues"
+  },
+  "homepage": "https://github.com/John-Lin/shipyardJS#readme"
+}
