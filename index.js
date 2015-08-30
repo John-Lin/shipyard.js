@@ -6,6 +6,24 @@ function ShipyardJS(host, key) {
   this.HOST = host || '127.0.0.1:8080';
 }
 
+ShipyardJS.prototype.isKeyValid = function(key, callback) {
+  request.get(
+    {
+      url: 'http://' + this.HOST + '/api/cluster/info',
+      headers: {'X-Service-Key': key},
+      timeout: 30000,
+    },
+    function(error, response, body) {
+      if (!error && response.statusCode === 200) {
+        callback(null, true);
+      } else if (!error && response.statusCode === 401) {
+        callback(null, false);
+      } else {
+        callback(error, false);
+      }
+    });
+};
+
 ShipyardJS.prototype.listContainers = function(callback) {
   request.get(
     {
