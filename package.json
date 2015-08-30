@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/John-Lin/shipyardJS.git"
+    "url": "git+https://github.com/John-Lin/shipyard.js.git"
   },
   "keywords": [
     "shipyard",
@@ -23,7 +23,7 @@
   "author": "John-Lin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/John-Lin/shipyardJS/issues"
+    "url": "https://github.com/John-Lin/shipyard.js/issues"
   },
-  "homepage": "https://github.com/John-Lin/shipyardJS#readme"
+  "homepage": "https://github.com/John-Lin/shipyard.js#readme"
 }
