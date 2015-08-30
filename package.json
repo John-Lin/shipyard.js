@@ -1,7 +1,7 @@
 {
   "name": "shipyard.js",
   "version": "0.0.1",
-  "description": "An Shipyard API wrapper for Node.js.",
+  "description": "A Shipyard API wrapper for Node.js.",
   "main": "index.js",
   "dependencies": {
     "http-status": "^0.2.0",
