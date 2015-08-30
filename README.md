@@ -1,4 +1,4 @@
-# ShipyardJS
+# shipyard.js
 [![npm][npm-image]][npm-url]
 
 [npm-image]: https://img.shields.io/npm/v/shipyard.js.svg
