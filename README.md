@@ -7,7 +7,7 @@
 ### Description
 
 **Note: The new Shipyard API wrapper for v3 is in [here](https://github.com/John-Lin/shipyard-api). This project is deprecated because of Shipyard v3 was [released](https://github.com/shipyard/shipyard/releases/tag/v3.0.0) with new
-APIs. **
+APIs.**
 
 A Shipyard v2.x.x API wrapper for `Node.js`
 
